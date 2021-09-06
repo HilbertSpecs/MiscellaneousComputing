@@ -75,39 +75,9 @@ int initialize()
 {
     cout << "How Many Binary Representation Basis Vector's would you like to Generate?" << endl;
     cin >> number_vectors;
-    /*
-     
-     cout << "What Dimension Binary Represenatation of Basis Vectors would you Like to Generate? " << endl;
-    cin >> basis_dimen;
-
-    cout << "How Many Bits would you like to Represent your Basis Vectors? " << endl;
-    cin >> bit_length;
     
-    cout << "Do you want to Operate in Classical Binary Space or Quantum Binary Space? " << endl;
-    cin >> Regime;
-    
-    if(Regime == "Classical")
-    {
-        classic_perm = basis_dimen;
-        perm = classic_perm;
-        cout << "User Has Chosen Classical Regime: Program will Generate a Complete Set of OrthoNormal Binary Representation Basis Vectors counting from 0 to " << basis_dimen << " in Numerical Binary Representation." << endl;
-    }
-    else if(Regime =="Quantum")
-    {
-        quantum_perm = pow(2, bit_length);
-        perm = quantum_perm;
-        cout << "Program will Generate a Complete Set Of OrthoNormal Binary Representation Basis Vectors Counting from 0 to " << perm << " in Numerical Binary Representation." << endl;
-    }
-    else
-        cout << "ERROR in Regime Choice: Input IS Case Sensitive." << endl;
-    */
-    
-    
-    //dataFile1.open("SystemOutput.dat",ios::out);
     dataFile2.open("EigenVect.txt",ios::out);
-    //dataFile3.open("BitCount.txt", ios::out|ios::in);
-    //dataFile4.open("BitAdd.txt",ios::out|ios::in);
-    //dataFile5.open("StringSumBasis.txt", ios::in|ios::out);
+    
     return number_vectors;
 }
 void generateBinaryBasis()
@@ -115,11 +85,6 @@ void generateBinaryBasis()
     
     dim = 3;
     bit_length = 8;
-    
-    
-    //cout << "N:" << dim << endl;
-    //cout << "Basis Dem:" << basis_dimen << endl;
-    //cout << "Permutations: " << perm << endl;
     
     bin_counter = new int[bit_length];
     bin_adder = new int[bit_length];
@@ -144,26 +109,7 @@ void generateBinaryBasis()
         
     }
     
-    //cout << "Below is Binary Adder of " << basis_dimen << " Bit Length." << endl;
-    //for(i=0; i < basis_dimen; i++)
-        //cout << bin_adder[i];
-    //cout << endl;
     
-    //cout << "Now we will Start building our Basis Vector's one-by-one by adding in binary. The binary-Adder to the binary-Counter over however many permutations there are for (0,1) in a N Bit-Length Vector." << endl;
-    
-    //cout << "Bit String Length: " << basis_dimen << endl;
-    //cout << "Permutations: " << perm << endl;
-    
-    //cout << "int bin_counter[]: ";
-    //for(i=0;i< bit_length;i++)
-        //cout << bin_counter[i];
-    //cout << endl;
-    
-    //cout << "int bin_adder[]: ";
-    //for(i=0; i < bit_length;i++)
-        //cout << bin_adder[i];
-    
-    //dataFile1 << "char binCount[]: ";
     for(i =0; i < bit_length; i++)
     {
         int inputCount = bin_counter[i];
